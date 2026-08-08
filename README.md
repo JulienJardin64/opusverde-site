@@ -6,8 +6,7 @@ Site statique de présentation (4 pages) pour `opusverde.fr`.
 
 - `index.html` — Accueil / présentation
 - `fonctionnalites.html` — Fonctionnalités
-- `tarifs.html` — Tarifs + FAQ
-- `contact.html` — Contact (email, téléphone, formulaire mailto)
+- `tarifs.html` — Tarifs
 - `styles.css` — feuille de style commune
 - `main.js` — menu mobile + animations au scroll
 - `logo-opusverde.png` — logo (version foncée, pour l'en-tête / fonds clairs)
