@@ -218,9 +218,10 @@ h2.section-title {
   margin-top: 22px;
   font-size: 0.9rem;
   color: var(--ink-soft);
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: flex-start; gap: 8px;
 }
-.hero__note strong { color: var(--forest-700); font-weight: 600; }
+.hero__note .dot { margin-top: 7px; }
+.hero__note strong { color: var(--forest-700); font-weight: 600; white-space: nowrap; }
 
 /* Field-guide card — signature element */
 .fieldcard {
@@ -396,34 +397,41 @@ h2.section-title {
   border-radius: var(--radius);
   padding: 32px 28px;
   display: flex; flex-direction: column;
+  position: relative;
 }
 .price--feature {
   border-color: var(--brand-500);
   box-shadow: 0 24px 50px -30px rgba(47, 107, 63, 0.55);
 }
+/* Emplacement réservé au bandeau sur TOUTES les cartes -> lignes alignées */
+.price__ribbon { height: 30px; margin-bottom: 8px; }
 .price__tag {
   font-family: var(--font-display);
   font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--brand-500); font-weight: 600; margin-bottom: 6px;
 }
-.price h3 { font-size: 1.4rem; }
+.price h3 { font-size: 1.4rem; min-height: 1.9rem; }
 .price__amount {
   font-family: var(--font-display);
   font-size: 2.6rem; font-weight: 600; color: var(--forest-900);
   margin: 16px 0 4px; letter-spacing: -0.02em;
+  min-height: 3.2rem; display: flex; align-items: baseline; flex-wrap: wrap;
+  white-space: nowrap;
 }
-.price__amount span { font-size: 1rem; color: var(--ink-soft); font-weight: 400; }
-.price__desc { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 20px; min-height: 44px; }
-.price ul { list-style: none; display: grid; gap: 12px; margin-bottom: 26px; flex: 1; }
+.price__amount span { font-size: 1rem; color: var(--ink-soft); font-weight: 400; margin-left: 6px; }
+.price__desc { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 20px; min-height: 66px; }
+.price__listhead { padding-top: 4px; border-top: 1px solid var(--line-soft); }
+.price ul { list-style: none; display: grid; gap: 12px; margin: 16px 0 26px; flex: 1; align-content: start; }
 .price li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; color: var(--ink); }
 .price li svg { flex: none; margin-top: 3px; color: var(--brand-500); }
-.price .btn { justify-content: center; width: 100%; }
+.price .btn { justify-content: center; width: 100%; margin-top: auto; }
 .price--feature .badge-top {
-  align-self: flex-start;
+  display: inline-block;
   font-family: var(--font-display);
   font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase;
   background: var(--brand-500); color: #fff;
-  padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
+  padding: 5px 12px; border-radius: 999px;
+  line-height: 1;
 }
 @media (max-width: 860px) { .price-grid { grid-template-columns: 1fr; } }
 
